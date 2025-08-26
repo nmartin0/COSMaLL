@@ -1,0 +1,4 @@
+#.POSIX
+
+hello:
+	echo "Hello"

@@ -1,4 +1,11 @@
-#.POSIX
+FILES= ext_math.c
+HEADERS= ext_math.h
+LDLIBS= -lm
 
-hello:
-	echo "Hello"
+program: ${FILES} ${HEADERS}
+	${CC} -o $@ $^ ${CFLAGS} ${LDLIBS}
+
+.PHONY clean
+
+clean:
+	rm *.o program
